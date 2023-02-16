@@ -1,0 +1,21 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  creationTimestamp: null
+  labels:
+    app.kubernetes.io/created-by: application-service
+    app.kubernetes.io/instance: loadpvia2161-tenant-component
+    app.kubernetes.io/managed-by: kustomize
+    app.kubernetes.io/name: loadpvia2161-tenant-component
+    app.kubernetes.io/part-of: loadpvia2161-tenant-app
+  name: loadpvia2161-tenant-component
+  namespace: loadpvia2161-tenant
+spec:
+  path: /
+  port:
+    targetPort: 8081
+  to:
+    kind: Service
+    name: loadpvia2161-tenant-component
+    weight: null
+status: {}
